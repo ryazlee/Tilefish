@@ -1,5 +1,10 @@
 <template>
   <div class="hello">
+    <span>
+      <img id="seaweed_image" class="animated infinite jello" src="../assets/seaweed.png">
+      <img id="tilefish_image" class="animated infinite pulse" src="../assets/tilefish.png"> 
+      <img id="seaweed_image" class="animated infinite jello" src="../assets/seaweed.png">
+    </span>
     <h1>{{ msg }}</h1>
     <ul>
       <li v-for="elem in commentary">

@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/tilefish.png">
     <router-view/>
   </div>
 </template>
