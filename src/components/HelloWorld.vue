@@ -7,9 +7,9 @@
       </li>
     </ul>
     <div id="tilefish_appreciation">
-      Show your support for the tilefish by SMASHING this button!!!!
-      <br>
-      <button class="btn btn-primary" v-on:click="counter++">Click to donate $5 to the WTF (World Wide Tilefish Foundation &copy;)</button>
+      Show your support for the tilefish by SMASHING this button!!!!<br>
+      <button class="btn btn-primary" v-on:click="counter++">Click to donate $5 to the WTF (World Wide Tilefish Foundation &copy;)</button><br>
+      Money Donated: ${{counter*5}}
     </div>
   </div>
 </template>
@@ -20,10 +20,10 @@ export default {
   data () {
     return {
       commentary: [
-        {comment: "This fish is rad", by: "Max Weber"},
-        {comment: "I wish more people knew about this amazing fish", by: "Barack Obama"},
-        {comment: "I didn't know that these fish <FILL IN FUN FACT>!", by: "Johnny Cash"},
-        {comment: "Tilefish are cooler than Guppies!!!!", by: "Munis Thahir"},
+        {comment: 'This fish is rad', by: 'Max Weber'},
+        {comment: 'I wish more people knew about this amazing fish', by: 'Barack Obama'},
+        {comment: 'I did not know that these fish could <FUN_FACT>!', by: 'Johnny Cash'},
+        {comment: 'Tilefish are cooler than Guppies!!!!', by: 'Munis Thahir'}
       ],
       counter: 0,
       msg: 'The Tilefish.'
