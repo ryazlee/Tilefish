@@ -16,6 +16,14 @@
       <button class="btn btn-primary" v-on:click="counter++">Click to donate $5 to the WTF (World Wide Tilefish Foundation &copy;)</button><br>
       Money Donated: ${{counter*5}}
     </div>
+    <div id="tilefish_funfacts">
+      Need reasons to donate, check out these fun facts!<br>
+      <ul>
+        <li v-for="elem in fun_facts" :key="elem">
+          {{elem}}
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -29,6 +37,12 @@ export default {
         {comment: 'I wish more people knew about this amazing fish', by: 'Barack Obama'},
         {comment: 'I did not know that these fish could <FUN_FACT>!', by: 'Johnny Cash'},
         {comment: 'Tilefish are cooler than Guppies!!!!', by: 'Munis Thahir'}
+      ],
+      fun_facts: [
+        'These fish can live up to 50 years'
+      ],
+      sources: [
+        'http://www.animalspot.net/tilefish.html'
       ],
       counter: 0,
       msg: 'The Tilefish.'
@@ -53,5 +67,9 @@ li {
 }
 a {
   color: #42b983;
+}
+#tilefish_funfacts {
+    font-size: 150%;
+    margin-top: 5%;
 }
 </style>
