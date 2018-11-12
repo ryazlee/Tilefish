@@ -6,11 +6,13 @@
       <img id="seaweed_image" class="animated infinite jello" src="~@/assets/seaweed.png"/>
     </span>
     <h1>{{ msg }}</h1>
-    <ul>
-      <li v-for="elem in commentary" :key="elem.comment">
-        "{{elem.comment}}" - {{elem.by}}
-      </li>
-    </ul>
+    <div id="tilefish_commentary">
+      <ul>
+        <li v-for="elem in commentary" :key="elem.comment">
+          <i>"{{elem.comment}}" - {{elem.by}}</i>
+        </li>
+      </ul>
+    </div>
     <div id="tilefish_appreciation">
       Show your support for the tilefish by SMASHING this button!!!!<br>
       <button class="btn btn-primary" v-on:click="counter++">Click to donate $5 to the WTF (World Wide Tilefish Foundation &copy;)</button><br>
@@ -18,8 +20,15 @@
     </div>
     <div id="tilefish_funfacts">
       Need reasons to donate, check out these fun facts!<br>
-      <ul>
+      <ol>
         <li v-for="elem in fun_facts" :key="elem">
+          {{elem}}
+        </li>
+      </ol>
+    </div>
+    <div id="tilefish_sources">
+      <ul>
+        <li v-for="elem in sources" :key="elem">
           {{elem}}
         </li>
       </ul>
@@ -39,7 +48,9 @@ export default {
         {comment: 'Tilefish are cooler than Guppies!!!!', by: 'Munis Thahir'}
       ],
       fun_facts: [
-        'These fish can live up to 50 years'
+        'These fish can live up to 50 years',
+        'A tilefish diet consists of eels, worms, crabs, seacucumbers, shrimps, and clams',
+        'Tilefish sexually mature at age 6'
       ],
       sources: [
         'http://www.animalspot.net/tilefish.html'
@@ -52,24 +63,44 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
+<style>
+#tilefish_commentary {
+  display: block;
+  margin-left: -45px;
 }
-ul {
+#tilefish_commentary ul {
   list-style-type: none;
-  padding: 0;
 }
-li {
-  width: 100vw;
-  display: inline-block;
-  margin: 0 10px;
+#tilefish_commentary li {
+  display: block;
 }
 a {
   color: #42b983;
 }
 #tilefish_funfacts {
-    font-size: 150%;
-    margin-top: 5%;
+  display: block;
+  font-size: 150%;
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
 }
+#tilefish_funfacts ol {
+  text-align: left;
+}
+#tilefish_funfacts li {
+  margin: auto;
+  font-size: 70%;
+}
+#tilefish_sources {
+  display: block;
+  margin-left: -45px;
+  font-size: 30%;
+}
+#tilefish_sources ul {
+  list-style-type: none;
+}
+#tilefish_sources li {
+  display: block;
+}
+
 </style>
