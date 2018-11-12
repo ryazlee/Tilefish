@@ -1,9 +1,9 @@
 <template>
   <div class="hello">
     <span>
-      <img id="seaweed_image" class="animated infinite jello" src="~@/assets/seaweed.png"/>
-      <img id="tilefish_image" class="animated infinite pulse" src="~@/assets/tilefish.png"/>
-      <img id="seaweed_image" class="animated infinite jello" src="~@/assets/seaweed.png"/>
+      <img id="seaweed_image" class="animated infinite jello" :src="seaweed_img"/>
+      <img id="tilefish_image" class="animated infinite pulse" :src="tilefish_img"/>
+      <img id="seaweed_image" class="animated infinite jello" :src="seaweed_img"/>
     </span>
     <h1>{{ msg }}</h1>
     <div id="tilefish_commentary">
@@ -41,6 +41,8 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
+      tilefish_img: require('../assets/tilefish.png'),
+      seaweed_img: require('../assets/seaweed.png'),
       commentary: [
         {comment: 'This fish is rad', by: 'Max Weber'},
         {comment: 'I wish more people knew about this amazing fish', by: 'Barack Obama'},
@@ -104,5 +106,4 @@ a {
 #tilefish_sources li {
   display: block;
 }
-
 </style>
