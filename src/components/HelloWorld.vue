@@ -50,7 +50,9 @@ export default {
       fun_facts: [
         'These fish can live up to 50 years',
         'A tilefish diet consists of eels, worms, crabs, seacucumbers, shrimps, and clams',
-        'Tilefish sexually mature at age 6'
+        'Tilefish sexually mature at age 6',
+        'If you are pregnant, it is not a good idea to consume this fish',
+        'Tilefish lay 2 - 8 billion eggs during spawning'
       ],
       sources: [
         'http://www.animalspot.net/tilefish.html'
