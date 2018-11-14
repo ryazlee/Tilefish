@@ -34,6 +34,7 @@
         </li>
       </ul>
     </div>
+    <div id="watermark">Created by Ryan Lee for IBC82 (Fall 2018)</div>
   </div>
 </template>
 
@@ -118,5 +119,8 @@ a {
 }
 h1 {
   font-size: 300%;
+}
+#watermark {
+  padding: 10px;
 }
 </style>
