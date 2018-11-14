@@ -16,7 +16,7 @@
     </div>
     <div id="tilefish_appreciation">
       Show your support for the tilefish by SMASHING this button!!!!<br>
-      <button class="btn btn-primary" v-on:click="counter++">Click to donate $5 to the WTF (World Wide Tilefish Foundation &copy;)</button><br>
+      <button class="btn btn-primary" v-on:click="counter++">Click to donate $5 to the WTF (Worldwide Tilefish Foundation &copy;)</button><br>
       Money Donated: ${{counter*5}}
     </div>
     <div id="tilefish_funfacts">
@@ -53,7 +53,7 @@ export default {
       ],
       fun_facts: [
         'These fish can live up to 50 years',
-        'A tilefish diet consists of eels, worms, crabs, seacucumbers, shrimps, and clams',
+        'A tilefish diet consists of eels, worms, crabs, sea cucumbers, shrimps, and clams',
         'Tilefish sexually mature at age 6',
         'If you are pregnant, it is not a good idea to consume this fish',
         'Tilefish lay 2 - 8 billion eggs during spawning'
