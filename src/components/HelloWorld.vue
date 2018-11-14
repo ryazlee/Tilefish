@@ -6,7 +6,7 @@
       <img id="seaweed_image" class="animated infinite jello" :src="seaweed_img"/>
     </span>
     <h1>{{ msg }}</h1>
-    <iframe width="500" height="400" src="https://www.youtube.com/embed/BnuBvBB1v_k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/BnuBvBB1v_k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <div id="tilefish_commentary">
       <ul>
         <li v-for="elem in commentary" :key="elem.comment">
@@ -122,5 +122,9 @@ h1 {
 }
 #watermark {
   padding: 10px;
+}
+iframe {
+  width: 50vw;
+  height: 30vw;
 }
 </style>
