@@ -6,6 +6,7 @@
       <img id="seaweed_image" class="animated infinite jello" :src="seaweed_img"/>
     </span>
     <h1>{{ msg }}</h1>
+    <iframe width="500" height="400" src="https://www.youtube.com/embed/BnuBvBB1v_k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <div id="tilefish_commentary">
       <ul>
         <li v-for="elem in commentary" :key="elem.comment">
@@ -19,7 +20,7 @@
       Money Donated: ${{counter*5}}
     </div>
     <div id="tilefish_funfacts">
-      Need reasons to donate, check out these fun facts!<br>
+      Need reasons to donate?  Check out these fun facts!<br>
       <ol>
         <li v-for="elem in fun_facts" :key="elem">
           {{elem}}
@@ -29,7 +30,7 @@
     <div id="tilefish_sources">
       <ul>
         <li v-for="elem in sources" :key="elem">
-          {{elem}}
+          <a v-bind:href="elem">{{ elem }}</a>
         </li>
       </ul>
     </div>
@@ -57,7 +58,8 @@ export default {
         'Tilefish lay 2 - 8 billion eggs during spawning'
       ],
       sources: [
-        'http://www.animalspot.net/tilefish.html'
+        'http://www.animalspot.net/tilefish.html',
+        'https://www.encyclopedia.com/plants-and-animals/animals/vertebrate-zoology/tilefish'
       ],
       counter: 0,
       msg: 'The Tilefish.'
@@ -87,19 +89,20 @@ a {
   font-size: 150%;
   text-align: center;
   margin: auto;
-  margin-top: 5%;
+  margin-top: 25px;
 }
 #tilefish_funfacts ol {
+  max-width: 85%;
   text-align: left;
+  margin: auto;
 }
 #tilefish_funfacts li {
-  margin: auto;
   font-size: 70%;
 }
 #tilefish_sources {
   display: block;
   margin-left: -45px;
-  font-size: 30%;
+  font-size: 35%;
 }
 #tilefish_sources ul {
   list-style-type: none;
@@ -112,5 +115,8 @@ a {
 }
 #header #tilefish_image{
   width: 50vw;
+}
+h1 {
+  font-size: 300%;
 }
 </style>
