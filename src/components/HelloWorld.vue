@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <span>
+    <span id="header">
       <img id="seaweed_image" class="animated infinite jello" :src="seaweed_img"/>
       <img id="tilefish_image" class="animated infinite pulse" :src="tilefish_img"/>
       <img id="seaweed_image" class="animated infinite jello" :src="seaweed_img"/>
@@ -82,6 +82,7 @@ a {
   color: #42b983;
 }
 #tilefish_funfacts {
+  max-width: 600px;
   display: block;
   font-size: 150%;
   text-align: center;
@@ -105,5 +106,11 @@ a {
 }
 #tilefish_sources li {
   display: block;
+}
+#header #seaweed_image{
+  width: 10vw;
+}
+#header #tilefish_image{
+  width: 50vw;
 }
 </style>
